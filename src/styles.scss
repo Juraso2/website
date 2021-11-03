@@ -1,0 +1,21 @@
+// 1. Your custom variables and variable overwrites. If you are using google fonts,
+//follow their instructions as normal as well. (add a link in the html for example).
+$global-font-family: 'Lato',
+sans-serif;
+
+$global-primary-background: #009cd8;
+$global-secondary-background: #2d2e2e;
+$global-inverse-color: #a4a5a6;
+
+$progress-border-radius: 0;
+$progress-background: #404242;
+$progress-height: 0.5rem;
+
+// 2. Import default variables and available mixins
+@import "~uikit/src/scss/variables-theme.scss";
+@import "~uikit/src/scss/mixins-theme.scss";
+
+// 4. Import UIkit
+@import "~uikit/src/scss/uikit-theme.scss";
+
+@import "global"
