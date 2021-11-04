@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
         return (<Section key={i} content={section} />)
       })}
 
-      <Footer location={data.strapi.homepage.Location} phone={data.strapi.homepage.Phone} email={data.strapi.homepage.Email} />
+      <Footer location={data.strapi.homepage.Location} phone={data.strapi.homepage.Phone} email={data.strapi.homepage.Email} clause={data.strapi.homepage.clause} />
     </>
   )
 }
@@ -63,6 +63,7 @@ export const pageQuery = graphql`
         Location
         Phone
         Email
+        Clause
         Section {
           ... on STRAPI_ComponentSectionsSection {
             Title

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import parsePhoneNumber from "libphonenumber-js"
 
-const Footer = ({ location, phone, email }) => {
+const Footer = ({ location, phone, email, clause }) => {
     const phoneNumber = parsePhoneNumber(phone, 'PL')
 
     return (
@@ -43,21 +43,19 @@ const Footer = ({ location, phone, email }) => {
                             )}
                         </div>
 
-                        <hr class="cv-animated-footer" />
+                        {clause && (
+                            <>
+                                <hr class="cv-animated-footer" />
 
-                        <div
-                            class="cv-clause uk-padding uk-padding-remove-top uk-padding-remove-horizontal cv-animated-footer">
-                            <p class="cv-clause_content">Wyrażam zgodę na przetwarzanie moich danych osobowych przez ROCKON
-                            SP. Z O.O. dla potrzeb niezbędnych do realizacji procesu tej oraz przyszłych rekrutacji
-                            (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018,
-                            poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z
-                            dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych
-                            osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE
-                            (RODO)).</p>
-                        </div>
+                                <div
+                                    class="cv-clause uk-padding uk-padding-remove-top uk-padding-remove-horizontal cv-animated-footer">
+                                    <p class="cv-clause_content">{clause}</p>
+                                </div>
+                            </>
+                        )}
                     </div>
 
-                    <div class="cv-section_content uk-grid-item-match  uk-visible@m">
+                    <div class="cv-section_content uk-grid-item-match uk-visible@m">
                         <div></div>
                     </div>
                 </div>
