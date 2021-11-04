@@ -3,9 +3,6 @@ require("dotenv").config({
 });
 
 module.exports = {
-  siteMetadata: {
-    title: "Daniel Jurewicz | Web developer",
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

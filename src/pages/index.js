@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import Header from '../components/Header'
@@ -32,6 +33,15 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <Helmet>
+        <meta charset="utf-8" />
+        <title>Daniel Jurewicz | Web developer</title>
+        <meta name="description" content="Full Stack Developer skupiony na Frontendzie. Nie straszny mi JavaScript, PHP, Vue czy React. Dużą uwagę przykładam do nauki nowych technologii w świecie IT." />
+        <meta name="robots" content="index, nofollow"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="canonical" href="https://daniel-jurewicz.pl" />
+      </Helmet>
+
       <Header location={data.strapi.homepage.Location} phone={data.strapi.homepage.Phone} email={data.strapi.homepage.Email} name={data.strapi.homepage.Name} surname={data.strapi.homepage.Surname} title={data.strapi.homepage.Title} />
 
       {data.strapi.homepage.Section.map((section, i) => {
