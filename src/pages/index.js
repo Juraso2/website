@@ -84,7 +84,7 @@ export const pageQuery = graphql`
                 }
                 ... on STRAPI_ComponentContentSkillsList {
                   __typename
-                  skills {
+                  skills(sort: "Position:asc") {
                     Title
                     Percent
                   }
